@@ -3,7 +3,7 @@
  */
 
 #ifndef APP_H
-#define APP_h
+#define APP_H
 
 #include <stdint.h>
 #include <stddef.h>
@@ -14,8 +14,10 @@ typedef struct app_context
 {
     /* File data */
     file_discovery_t file_information;
+
     /* Parsed data */
     data_list_t parsed_data;
+
 } app_context_t;
 
 /* @Brief: Init all parts of app

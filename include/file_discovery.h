@@ -32,20 +32,21 @@ typedef struct file_discovery
     /* System resources */
     uint32_t fd;
     void *mmap_ptr;
+    char *file_path;
 } file_discovery_t;
 
 /* @brief: Initializes the file discovery structure
  * @param self: Pointer to the file discovery structure
+ * @param file_path: Path to the file to be discovered
  * @return: 0 on success, non-zero on failure
  */
-uint8_t file_discovery_init(file_discovery_t *self);
+uint8_t file_discovery_init(file_discovery_t *self, char *file_path);
 
 /* @brief: Performs the file discovery work
  * @param self: Pointer to the file discovery structure
- * @param ctx: Pointer to the application context
  * @return: 0 on success, non-zero on failure
  */
-uint8_t file_discovery_work(file_discovery_t *self, struct app_context *ctx);
+uint8_t file_discovery_work(file_discovery_t *self);
 
 /* @brief: Deinitializes the file discovery structure
  * @param self: Pointer to the file discovery structure

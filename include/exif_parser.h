@@ -5,4 +5,4 @@
 #ifndef EXIF_PARSER_H
 #define EXIF_PARSER_Hx
 
-#endif /* EXIF_PARSER_H */
+#endif /* EXIFx_PARSER_H */

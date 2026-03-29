@@ -67,4 +67,4 @@ void data_list_print(const data_list_t *list);
  */
 uint8_t data_list_free(data_list_t **list_ptr);
 
-#endif /* DATA_LIST_H /
+#endif /* DATA_LIST_H */

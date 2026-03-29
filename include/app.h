@@ -7,39 +7,20 @@
 
 #include <stdint.h>
 #include <stddef.h>
-#include "data_storage.h"
-
-typedef enum
-{
-    FMT_UNKNOWN,
-    FMT_JPEG,
-    FMT_PNG,
-    FMT_TIFF
-} app_filetype_t;
-
-typedef enum
-{
-    ORDER_LITTLE,
-    ORDER_BIG
-} app_byteorder_t;
-
+#include "data_list.h"
+#include "file_discovery.h"
 
 typedef struct app_context
 {
-    /* App data */
-    app_filetype_t filetype;
-    app_byteorder_t byteorder;
-    data_node_t *exif_data;
-
-    /* System resources */
-    uint32_t fd;
-    void *mmap_ptr;
-    size_t file_size;
+    /* File data */
+    file_discovery_t file_information;
+    /* Parsed data */
+    data_list_t parsed_data;
 } app_context_t;
 
-/* @Brief: Init app layer and parser
+/* @Brief: Init all parts of app
  * @Param: self pointer
- * @Param: int argc, char **argv
+ * @Param: argc and argv
  * @Return: 0 on success
  */
 uint8_t app_init(app_context_t *self, int argc, char **argv);

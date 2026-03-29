@@ -21,10 +21,10 @@ typedef enum
 {
     ORDER_LITTLE,
     ORDER_BIG
-} app_byteorder_t
+} app_byteorder_t;
 
 
-typedef struct app
+typedef struct app_context
 {
     /* App data */
     app_filetype_t filetype;

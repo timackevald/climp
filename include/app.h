@@ -29,7 +29,7 @@ typedef struct app
     /* App data */
     app_filetype_t filetype;
     app_byteorder_t byteorder;
-    data_storage_node_t *exif_data;
+    data_node_t *exif_data;
 
     /* System resources */
     uint32_t fd;

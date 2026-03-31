@@ -3,7 +3,6 @@
  */
 
 #include "../include/file_discovery.h"
-#include <endian.h>
 #include <string.h>
 #include <fcntl.h>
 #include <stdio.h>

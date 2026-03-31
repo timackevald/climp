@@ -18,6 +18,7 @@ typedef enum
 
 typedef enum
 {
+    ORDER_UNKNOWN,
     ORDER_LITTLE,
     ORDER_BIG
 } file_byteorder_t;
@@ -32,7 +33,7 @@ typedef struct file_discovery
     /* System resources */
     uint32_t fd;
     void *mmap_ptr;
-    char *file_path;
+    char *file_name;
 } file_discovery_t;
 
 /* @brief: Initializes the file discovery structure
